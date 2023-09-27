@@ -11,7 +11,7 @@
             <tr>
                 <th>#</th>
                 <th>Müşteri Adı Soyadı</th>
-              
+
                 <th>Müşteri Giriş Tarihi</th>
                 <th>Müşteri Çıkış Tarihi</th>
                 <th>Durum</th>
@@ -29,15 +29,15 @@
                 <tr>
                     <th>@count</th>
                     <td>@item.Name</td>
-                   
+
                     <td>@(((DateTime)item.Checkin).ToString("dd-MM-yyyy")) </td>
                     <td>@(((DateTime)item.CheckOut).ToString("dd-MM-yyyy"))</td>
                     <td><span class="badge badge-primary px-2">@item.Status</span></td>
                     <td><a href="/BookingAdmin/ApprovedReservation/@item.BookingID" class="btn btn-outline-success">Onayla</a></td>
-                    <td><a href="#" class="btn btn-outline-danger">İptal Et</a></td>
-                    <td><a href="#" class="btn btn-outline-warning">Beklet</a></td>
-                    <td><a href="#" class="btn btn-outline-info">Güncelle</a></td>
-                    <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+                    <td><a href="/BookingAdmin/CancelReservation/@item.BookingID" class="btn btn-outline-danger">İptal Et</a></td>
+                    <td><a href="/BookingAdmin/WaitReservation/@item.BookingID" class="btn btn-outline-warning">Beklet</a></td>
+                    <td><a href="/BookingAdmin/UpdateBooking/@item.BookingID" class="btn btn-outline-info">Güncelle</a></td>
+                    <td><a href="/BookingAdmin/UpdateBooking/@item.BookingID" class="btn btn-outline-dark">Detaylar</a></td>
                 </tr>
 
             }
